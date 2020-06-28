@@ -37,48 +37,12 @@ nav ul {
   list-style: none;
 }
 
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
 a {
   font-size: 100%;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
   background: transparent;
-}
-
-ins {
-  text-decoration: none;
-  color: #000;
-  background-color: #ff9;
-}
-
-mark {
-  font-weight: bold;
-  font-style: italic;
-  color: #000;
-  background-color: #ff9;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-  cursor: help;
-  border-bottom: 1px dotted;
 }
 
 table {
@@ -146,146 +110,186 @@ body{
   color: white;
   z-index: 999;
 }
+.m_fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 /* ___________________________________________________________________________ */
 
 /* toppage.css ___________________________________________________________________________ */
 
+/* // section */
 .wf-hannari { font-family: "Hannari"; }
 
 .section {
   width: 100%;
 }
 .section-content {
-  text-align: center;
-  padding-top: 120px;
+  padding-top: 60px;
 }
 
 .main{
   position: relative;
 }
 .section1{
-  background-image: url("/images/toppage_img1.jpg");
+  background-image: url("images/toppage_img1.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
-  /* // overflow: hidden; */
 }
 
 .split_section{
   position: relative;
 }
-.split_section_bg1{
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.split_section .split_section_bg1{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-.split_section_bg1:hover{
-  background-image: url("/images/toppage_img1.jpg");
-  background-size: cover;
-  background-position: center;
+.split_section .split_section_bg1:hover{
+    background-image: url("images/toppage_img1.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.split_section_bg2 {
-  position: absolute;
-  top: -15vh;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* // background-image: linear-gradient(#9437FF, #7A81FF); */
-  background-image: url("/images/toppage_img2_mask.jpg");
-  background-size: cover;
-  background-position: center;
-  transform: skewY(-20deg);
-  transform-origin: top left;
+.split_section .split_section_bg2 {
+    position: absolute;
+    top: -37vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/toppage_img2_mask.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: skewY(-15deg);
+    transform-origin: top left;
 }
-.split_section_bg2:hover{
-  background-image: url("/images/toppage_img2.jpg");
-  background-size: cover;
-  background-position: center;
-  transform: skewY(-20deg);
-  transform-origin: top left;
+.split_section .split_section_bg2:hover{
+    background-image: url("images/toppage_img2.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: skewY(-15deg);
+    transform-origin: top left;
 }
-.split_section2_bg2 {
-  position: absolute;
-  top: -15vh;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* // background-image: linear-gradient(#9437FF, #7A81FF); */
-  background-image: url("/images/toppage_img2_mask.jpg");
-  background-size: cover;
-  background-position: center;
-  transform: skewY(-20deg);
-  transform-origin: top left;
+.split_section .split_section2_bg2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/toppage_img2_mask.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: skewY(15deg);
+    transform-origin: top left;
 }
-.split_section2_bg2::before{
-  /* 透過した黒を上から重ねるイメージ */
-  background-color: rgba(0,0,0,0.1);
-  /* 自由に位置指定 */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: ' ';
+.split_section_bg2_hover {
+  background-image: url("images/toppage_img2.jpg");
 }
-.split_section2_bg2:hover{
-  background-image: url("/images/toppage_img2.jpg");
-  background-size: cover;
-  background-position: center;
-  transform: skewY(15deg);
-  transform-origin: top left;
+
+.split_section .split_section2_bg2:hover{
+    background-image: url("images/toppage_img2.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: skewY(15deg);
+    transform-origin: top left;
 }
 .top_title{
+  text-align: center;
   color: white;
   font-family: "Noto Sans JP";
-  padding: 20px;
-  height:95%;
   font-size: 3.4em;
-  margin: 0 0 0 60px;
-  -ms-writing-mode: tb-lr;
-  writing-mode: vertical-lr;
-  position: fixed;
-  top: 120px;
-  line-height: 1.2em;
-  z-index: 999;
-  background-image: url("/images/test12.png");
-  background-size: cover;
-  background-position:top;
+}
+
+.top_title span{
+  padding-top: 2em;
 }
 
 .top_content{
-  margin-top: 20%;
+  margin-top: 40vh;
 }
 
+/* .section2 */
 .section2{
-  background-image: url("/images/toppage_img3.jpg");
+  background-image: url("images/toppage_img1.jpg");
   background-size: cover;
   background-position: center;
-  height: 100%;
 }
+
+
 .vision_wrap{
+  margin-top: 20vh;
+  width: 100%;
   background-color: white;
-  opacity: 0.85;
+  opacity: 0.8;
+  padding: 100px 0;
 }
+
+.vision_wrap h1{
+  padding-top: 1em;
+}
+.vision_wrap h2{
+  padding-bottom:0.5em;
+}
+.vision_wrap p{
+  font-size: 1.3em;
+}
+.vision_content{
+}
+
+.section2_title{
+}
+.section2_title p{
+  color: #0C395E;
+}
+.section2_title h2{
+  text-align: center;
+  padding-top: 20px;
+  color: #0C395E;
+  font-size: 5em;
+}
+.section2_content{
+}
+.section2_content h2{
+  font-size: 2em;
+  padding-bottom: 30px;
+}
+
 /* // section3 */
 .section3{
   overflow: hidden;
-  background-image: url("/images/toppage_img1_mask.jpg");
+  background-image: url("images/toppage_img1_mask.jpg");
   background-size: cover;
   background-position: center;
+}
+.section3 .greeting_content{
+  position:relative;
+}
+.section3 .greeting_content .greeting_link1{
+  position: absolute;
+  top: 100px;
+  left: 35%;
+  color: white;
+  background-color: #28A6E0;
+}
+.section3 .greeting_content .greeting_link2{
+  position: absolute;
+  top: 400px;
+  left: 60%;
+  color: white;
+  background-color: #28A6E0;
 }
 
 /* // section4 */
 .section4{
-  background-image: url("/images/apex.jpg");
+  background-image: url("images/apex.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -293,59 +297,92 @@ body{
   background-color: white;
   opacity: 0.85;
 }
+.support_for_venture_wrap h1{
+    padding-top: 1em;
+  }
+.support_for_venture_wrap h2{
+  padding-bottom:0.5em;
+}
+.support_for_venture_wrap p{
+    font-size: 1.3em;
+    text-align: left;
+}
+.support_for_venture_wrap .max-width{
+  max-width: 630px;
+}
+.support_for_venture_wrap .li{
+    text-align:left;
+    font-size: 1.5em;
+}
 
 /* // section5 */
 .section5{
   overflow: hidden;
-  background-image: url("/images/toppage_img1_mask.jpg");
+  background-image: url("images/toppage_img1_mask.jpg");
   background-size: cover;
   background-position: center;
 }
-.business_content{
+.section5 .business_content{
   position:relative;
 }
-.business_link1{
+.section5 .business_content .business_link1{
   position: absolute;
   top: 100px;
   left: 60%;
   color: white;
   background-color: #28A6E0;
 }
-.business_link2{
-  position: absolute;
-  top: 400px;
-  left: 35%;
-  color: white;
-  background-color: #28A6E0;
+.section5 .business_content .business_link2{
+    position: absolute;
+    top: 400px;
+    left: 35%;
+    color: white;
+    background-color: #28A6E0;
 }
-.business_bg{
-  top: 20vh;
+.section5 .business_bg{
+  top: 35vh;
   transform: skewY(15deg);
 }
 
 /* // section6 */
 .section6{
-  background-image: url("/images/apex.jpg");
+  background-image: url("images/apex.jpg");
   background-size: cover;
   background-position: center;
 }
-.company_profile_wrap{
-  background-color: white;
-  opacity: 0.85;
+.section6 .company_profile_wrap{
+    background-color: white;
+    opacity: 0.85;
 }
-.company_btn{
+.section6 .company_profile_wrap h1{
+  padding-top: 1em;
+}
+.section6 .company_profile_wrap h2{
+  padding-bottom:0.5em;
+}
+.section6 .company_profile_wrap p{
+  font-size: 1.3em;
+}
+.section6 .company_profile_wrap .company_btn{
   margin-bottom: 2em;
 }
-.map-container-section{
+.section6 .company_profile_wrap .map-container-section{
   width: 80%;
   margin: 0 auto;
   padding-bottom: 100px;
 }
 
 .test3{
-  background-image: url("/images/toppage_img3.jpg");
+  background-image: url("images/toppage_img3.jpg");
   background-size: cover;
   background-position: center;
+}
+
+h2 {
+  color: #232323;
+}
+h2:first-child{
+  margin-top: 0;
 }
 
 .section-red {
@@ -382,4 +419,21 @@ body{
 
 .test{
   padding-top: 93px;
+}
+
+
+/* split_section btnにマウスオーバー時に背景画像をセットするためのクラス。importantがないと動かない もともとbackground-imageがネスとされて指定されているので優先度が高くなっているためと思われる。のちのちimportantをはずす */
+.split_image1_mouseover_btn{
+  background-image: url("images/toppage_img1.jpg")!important;
+}
+
+.split_image2_mouseover_btn{
+  background-image: url("images/toppage_img2.jpg")!important;
+}
+
+.split_image3_mouseover_btn{
+  background-image: url("images/toppage_img1.jpg")!important;
+}
+.split_image4_mouseover_btn{
+  background-image: url("images/toppage_img2.jpg")!important;
 }

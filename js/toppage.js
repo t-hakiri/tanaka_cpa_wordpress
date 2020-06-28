@@ -26,8 +26,45 @@ var option = {
 };
 
 $(function () {
-  $.scrollify(option); // scrollifyの実行
+  // scrollifyの実行
+  $.scrollify(option);
+
+  // split_section btnにマウスオーバー時の挙動 jqを使わなくてもスマートに行けそうゴリ押し
+  $("#greeting_link1").hover(
+    function () {
+      $("#split_section_bg2").addClass("split_image2_mouseover_btn");
+    },
+    function () {
+      $("#split_section_bg2").removeClass("split_image2_mouseover_btn");
+    }
+  );
+  $("#greeting_link2").hover(
+    function () {
+      $("#section3").addClass("split_image1_mouseover_btn");
+    },
+    function () {
+      $("#section3").removeClass("split_image1_mouseover_btn");
+    }
+  );
+
+  $("#business_link2").hover(
+    function () {
+      $("#split_section2_bg2").addClass("split_image4_mouseover_btn");
+    },
+    function () {
+      $("#split_section2_bg2").removeClass("split_image4_mouseover_btn");
+    }
+  );
+  $("#business_link1").hover(
+    function () {
+      $("#section5").addClass("split_image3_mouseover_btn");
+    },
+    function () {
+      $("#section5").removeClass("split_image3_mouseover_btn");
+    }
+  );
 });
+
 $(window).on("resize", function () {
   if (current) {
     var currentScrl = $(".section").eq(current).offset().top;
