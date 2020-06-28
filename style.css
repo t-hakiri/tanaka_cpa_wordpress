@@ -128,6 +128,9 @@ img {
   background-color:;
   color: #333;
 } */
+body{
+  position: relative;
+}
 .navbar{
   background-color: #28A6E0;
   a{
@@ -143,4 +146,240 @@ img {
   color: white;
   z-index: 999;
 }
+/* ___________________________________________________________________________ */
 
+/* toppage.css ___________________________________________________________________________ */
+
+.wf-hannari { font-family: "Hannari"; }
+
+.section {
+  width: 100%;
+}
+.section-content {
+  text-align: center;
+  padding-top: 120px;
+}
+
+.main{
+  position: relative;
+}
+.section1{
+  background-image: url("/images/toppage_img1.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  /* // overflow: hidden; */
+}
+
+.split_section{
+  position: relative;
+}
+.split_section_bg1{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.split_section_bg1:hover{
+  background-image: url("/images/toppage_img1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.split_section_bg2 {
+  position: absolute;
+  top: -15vh;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* // background-image: linear-gradient(#9437FF, #7A81FF); */
+  background-image: url("/images/toppage_img2_mask.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: skewY(-20deg);
+  transform-origin: top left;
+}
+.split_section_bg2:hover{
+  background-image: url("/images/toppage_img2.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: skewY(-20deg);
+  transform-origin: top left;
+}
+.split_section2_bg2 {
+  position: absolute;
+  top: -15vh;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* // background-image: linear-gradient(#9437FF, #7A81FF); */
+  background-image: url("/images/toppage_img2_mask.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: skewY(-20deg);
+  transform-origin: top left;
+}
+.split_section2_bg2::before{
+  /* 透過した黒を上から重ねるイメージ */
+  background-color: rgba(0,0,0,0.1);
+  /* 自由に位置指定 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
+.split_section2_bg2:hover{
+  background-image: url("/images/toppage_img2.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: skewY(15deg);
+  transform-origin: top left;
+}
+.top_title{
+  color: white;
+  font-family: "Noto Sans JP";
+  padding: 20px;
+  height:95%;
+  font-size: 3.4em;
+  margin: 0 0 0 60px;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  position: fixed;
+  top: 120px;
+  line-height: 1.2em;
+  z-index: 999;
+  background-image: url("/images/test12.png");
+  background-size: cover;
+  background-position:top;
+}
+
+.top_content{
+  margin-top: 20%;
+}
+
+.section2{
+  background-image: url("/images/toppage_img3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.vision_wrap{
+  background-color: white;
+  opacity: 0.85;
+}
+/* // section3 */
+.section3{
+  overflow: hidden;
+  background-image: url("/images/toppage_img1_mask.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* // section4 */
+.section4{
+  background-image: url("/images/apex.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.support_for_venture_wrap{
+  background-color: white;
+  opacity: 0.85;
+}
+
+/* // section5 */
+.section5{
+  overflow: hidden;
+  background-image: url("/images/toppage_img1_mask.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.business_content{
+  position:relative;
+}
+.business_link1{
+  position: absolute;
+  top: 100px;
+  left: 60%;
+  color: white;
+  background-color: #28A6E0;
+}
+.business_link2{
+  position: absolute;
+  top: 400px;
+  left: 35%;
+  color: white;
+  background-color: #28A6E0;
+}
+.business_bg{
+  top: 20vh;
+  transform: skewY(15deg);
+}
+
+/* // section6 */
+.section6{
+  background-image: url("/images/apex.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.company_profile_wrap{
+  background-color: white;
+  opacity: 0.85;
+}
+.company_btn{
+  margin-bottom: 2em;
+}
+.map-container-section{
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.test3{
+  background-image: url("/images/toppage_img3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.section-red {
+  background-color: #ff6363;
+}
+
+.section-blue {
+  background-color: #8fbbff;
+}
+
+.section-green {
+  background-color: #fff;
+}
+
+.pagenation{
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 40%;
+}
+.pagenation li{
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.pagenation a{
+  display: block;
+  height: 10px;
+  border: 1px solid #000;
+  width: 10px;
+}
+.pagenation a.active{
+  background: #000;
+}
+
+.test{
+  padding-top: 93px;
+}
