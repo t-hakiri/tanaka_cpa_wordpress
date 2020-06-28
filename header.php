@@ -18,14 +18,15 @@ content="width=device-width, initial-scale=1.0 ">
 <!-- scrollify -->
 <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
 
-
 <?php wp_head(); ?><!--システム・プラグイン用-->
 </head>
+
+
 <body <?php body_class(); ?>>
 <header>
-
-  <!-- タイトルの表記 -->
   <div class="header-inner">
+
+    <!-- タイトルの表記 -->
     <?php
     if(is_home() || is_front_page()) {
       $title_tag_start = '<h1 class="site-title">';
@@ -42,7 +43,63 @@ content="width=device-width, initial-scale=1.0 ">
         </a>
       <?php echo $title_tag_end; ?>
     </div>
-  <!-- //タイトルの表記 -->
+    <!-- end タイトルの表記 -->
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg header">
+      <div class="container">
+        <!-- Navbar brand -->
+        <a href="#" class="nav-link">HOME</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">代表について</a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">ご挨拶</a>
+                <a class="dropdown-item" href="#">プロフィール</a>
+              </div>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">事業内容</a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">事業内容</a>
+                <a class="dropdown-item" href="#">よくある質問</a>
+                <a class="dropdown-item" href="#">費用について</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><i class="fas fa-handshake"> ベンチャー企業支援について</i></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><i class="fas fa-paper-plane"> お問い合わせ</i></a>
+            </li>
+
+          </ul>
+          <!-- Links -->
+        </div>
+      <!-- Collapsible content -->
+      </div>
+
+    </nav>
+    <!--/.Navbar-->
 
   </div><!--end header-inner-->
 </header>

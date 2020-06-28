@@ -6,6 +6,7 @@ Author: mashiyu
 Description: original theme
 version： 0.1
 */
+
 /*cssのリセット*/
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, abbr, address, cite, code, del, dfn, em, img,
@@ -120,3 +121,26 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+/* nav ___________________________________________________________________________ */
+/* .navbar{
+  background-color:;
+  color: #333;
+} */
+.navbar{
+  background-color: #28A6E0;
+  a{
+    color: white;
+  }
+}
+.header{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #28A6E0;
+  color: white;
+  z-index: 999;
+}
+
