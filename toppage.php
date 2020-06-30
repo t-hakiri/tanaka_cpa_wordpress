@@ -24,7 +24,9 @@ Template Name: toppageのテンプレート
             <div class="col-6 col-xs-12 section2_title">
               <div class="">
                 <p>____ 田中公認会計士税理士事務所</p>
-                <h2 class="section2_h2">Quality</h2>
+                <h2 class="section2_h2 top_title1">Quality</h2>
+                <h2 class="section2_h2 top_title2">Speed</h2>
+                <h2 class="section2_h2 top_title3">Communication</h2>
               </div>
             </div>
             <div class="col-sm-12 col-lg-6 col-md-6 col-xs-12 section2_content">

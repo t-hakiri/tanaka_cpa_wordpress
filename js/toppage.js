@@ -28,6 +28,7 @@ var option = {
 $(function () {
   // scrollifyの実行
   $.scrollify(option);
+  $(".top_title2, .top_title3").hide();
 
   // split_section btnにマウスオーバー時の挙動 jqを使わなくてもスマートに行けそうゴリ押し
   $("#greeting_link1").hover(
@@ -75,3 +76,23 @@ $(window).on("resize", function () {
 window.addEventListener("popstate", function (e) {
   document.location.reload();
 });
+
+// フェードインアウト
+
+var services = [".top_title1", ".top_title2", ".top_title3"];
+var nowProcess = 0;
+
+var fadeProcess = function () {
+  var fadeOutTgt = nowProcess;
+  if (++nowProcess == services.length) nowProcess = 0;
+  var fadeInTgt = nowProcess;
+  setTimeout(function () {
+    $(services[fadeOutTgt]).fadeOut(500);
+    setTimeout(function () {
+      $(services[fadeInTgt]).fadeIn();
+      fadeProcess();
+    }, 500);
+  }, 3000);
+};
+
+fadeProcess();
